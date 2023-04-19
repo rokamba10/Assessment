@@ -1,20 +1,17 @@
-import os
+# import os
 from datetime import datetime, timedelta
-
 import pytz as pytz
 import requests
 
-
 def get_pull_requests():
     # Authenticate with GitHub API using an access token
-    os.environ['GITHUB_ACCESS_TOKEN'] = "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"
-    access_token = os.environ['GITHUB_ACCESS_TOKEN']
-    owner, repo = "homebrew", "brew"
+    owner, repo = "hashicorp", "terraform"
     manager = {"name": "John Doe", "email": "johndoe@company.xyz"}
     sender = {"name": "Rostin Okamba", "email": "rostinokamba@welcome.com", "role": "DevOps Engineer"}
     open_issues = f"https://api.github.com/repos/{owner}/{repo}/pulls"
-    response = requests.get(open_issues.format(owner=owner, repo=repo),
-                            headers={'Authorization': f'Token {access_token}'})
+    response = requests.get(open_issues.format(owner=owner, repo=repo))
+    # response = requests.get("https://api.github.com/repos/hashicorp/terraform/pulls")
+
     opened_prs, closed_prs, in_progress_prs = [], [], []
 
     if response.status_code == 200:

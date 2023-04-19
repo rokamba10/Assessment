@@ -33,11 +33,11 @@ This is a Python script that retrieves all open, closed, and in-progress pull re
 ## Sample Output
     From: xxxx@welcome.com
     To: johndoe@company.xyz
-    Subject: Summary of OPEN, CLOSED and IN PROGRESS Pull Requests from 2023-04-12 to 2023-04-19
+    Subject: Summary of OPEN, CLOSED and IN PROGRESS Pull Requests from 2023-04-10 to 2023-04-17
 
     Hello John Doe,
 
-    Here is a summary of pull requests for the brew repository from 2023-04-12 to 2023-04-19:
+    Here is a summary of pull requests for the brew repository from 2023-04-10 to 2023-04-17:
 
     Open Pull Requests:
     -------------------
